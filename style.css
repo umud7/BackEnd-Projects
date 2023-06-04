@@ -606,7 +606,7 @@ nav li:hover a{
 
  /* End Xidmetler Section */
 
-
+ /* Start Partnior Section */
 .partnior-container{
   padding-top: 15px;
 }
@@ -656,10 +656,14 @@ nav li:hover a{
 .slick-initialized .slick-slide{
   display: block;
 }
+
 .copy{
   padding-top: 250px;
 }
 
+ /* End Partnior Section */
+
+  /* Start Contact Section */
 .contact-text{
   text-align: center;
 }
@@ -669,6 +673,7 @@ nav li:hover a{
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
+  margin: 5px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -856,6 +861,7 @@ textarea.input {
 
 .contact-info .title {
   color: #0f1111;
+  margin: 5px;
 }
 
 .text {
@@ -1034,7 +1040,11 @@ textarea.input {
   }
 }
 
+ /* End Contact Section */
+
 /* ! WELCOME TO ABOUT PAGE  ! */
+
+ /* Start Haqqimizde Section */
 
 .heading{
   text-align: center;
@@ -1108,4 +1118,92 @@ margin: 15px 0px;
     padding: 15px;
   }
 
+}
+ /* End Haqqimizde Section */
+
+
+ .timeline-section{
+	background-color: white;
+	min-height: 100vh;
+	padding: 100px 15px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #eaa023;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 18px;
+	color: #eaa023;
+	margin:6px 0 15px;
+}
+.timeline-content{
+    background-color: #2f363e;
+	padding: 30px;
+	border-radius: 5px;
+}
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
 }

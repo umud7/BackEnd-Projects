@@ -1236,7 +1236,6 @@ margin: 15px 0px;
   .project-heading h1{
     font-size: 2.7rem;
     font-weight: 600;
-    text-transform: uppercase;
     color: black;
   }
 
@@ -1328,3 +1327,95 @@ margin: 15px 0px;
 }
 
     /* End Telimler Section */
+
+    /* ! WELCOME Corporative SECTION ! */
+
+    .container-corporate {
+      margin: 30px;
+      max-width: 1200px;
+    }
+    
+    .heading-corporate-1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    
+    .heading-corporate-3 {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: crimson;
+      margin-bottom: 10px;
+    }
+    
+    .sub-heading-corporate {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+    }
+    
+    .sub-heading-corporate p {
+      font-weight: 700;
+      text-transform: capitalize;
+      margin-right: 10px;
+    }
+    
+    .sub-heading-corporate span {
+      color: #555;
+      font-weight: 300;
+      border-right: 1px solid #ccc;
+      padding-right: 10px;
+    }
+    
+    .sub-heading-corporate .importent {
+      color: black;
+      font-weight: 300;
+    }
+    
+    /* HOME */
+    .home-corporate {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 40px;
+    }
+    
+    .home-corporate-img {
+      width: 100%;
+    }
+    
+    .list-corporate {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .list-corporate img {
+      width: 100%;
+      height: 80px;
+    }
+    
+    
+    @media (max-width: 950px) {
+      .home-corporate {
+        grid-template-columns: 1fr;
+      }
+    
+      .lists-corporate {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    
+      .list-corporate {
+        grid-template-columns: 1fr 5fr;
+      }
+    
+    }
+    
+    @media (max-width: 650px) {
+      .lists-corporate {
+        grid-template-columns: 1fr;
+      }
+    }

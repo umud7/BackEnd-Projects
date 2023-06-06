@@ -65,7 +65,7 @@ inputs.forEach((input) => {
 });
 
 
-// ! Project Box
+// ! Project Box Təlimlər Hissəsi
 
 $(document).on('click','.project-filter li',function(){
 $(this).addClass('project-filter-active').siblings().removeClass('project-filter-active')

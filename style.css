@@ -1216,12 +1216,15 @@ margin: 15px 0px;
 
   /* ! WELCOME COURSE SECTION ! */
 
+  /* Start Telimler Section */
+
   #project{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 50px 0px;
+    font-family: "Roboto", Sans-serif;;
   }
 
   .project-heading{
@@ -1288,3 +1291,40 @@ margin: 15px 0px;
     overflow: hidden;
     border-radius: 5px;
   }
+
+  /* Tablet Styles */
+
+@media (max-width: 768px) {
+  .project-container {
+    max-width: 600px;
+  }
+
+  .project-box {
+    width: 180px;
+    margin: 15px;
+  }
+}
+
+/* Mobile Styles */
+
+@media (max-width: 480px) {
+  .project-container {
+    max-width: 320px;
+  }
+
+  .project-box {
+    width: 140px;
+    margin: 10px;
+  }
+
+  .project-heading h1 {
+    font-size: 2rem;
+  }
+
+  .project-filter li {
+    font-size: 0.9rem;
+    padding: 3px 15px;
+  }
+}
+
+    /* End Telimler Section */

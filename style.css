@@ -1155,7 +1155,6 @@ margin: 15px 0px;
 }
 .timeline-item:nth-child(odd){
     padding-right: calc(50% + 30px);
-	text-align: right;
 }
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
@@ -1330,6 +1329,7 @@ margin: 15px 0px;
 
     /* ! WELCOME Corporative SECTION ! */
 
+    /* Start Letter Section */
     .container-corporate {
       margin: 30px;
       max-width: 1200px;
@@ -1419,3 +1419,9 @@ margin: 15px 0px;
         grid-template-columns: 1fr;
       }
     }
+
+    /* End Letter Section */
+
+
+    
+   

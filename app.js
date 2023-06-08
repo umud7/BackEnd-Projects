@@ -84,3 +84,7 @@ $('.list').click(function(){
    }
 });
 });
+
+
+
+

@@ -1,0 +1,15 @@
+﻿@model List<Customers>
+<div class="partnior-container">
+    <h2 class="text-center font-weight-bold">Müştərilərimiz</h2>
+    <p>
+        Bank, Sığorta, FMCG, Neft, İT, Təhsil və digər sektorlardan 200-dən çox
+        şirkət əməkdaşlarının peşəkar inkişafında <br> etibarlı tərəfdaş olaraq İnnabı
+        seçmiş və bizim təlim proqramlarımız və xidmətlərimizdən faydalanmışdır.
+    </p>
+    <section class="customer-logos slider">
+        @foreach (var item in Model)
+        {
+            <div class="slide"><img src="~/img/@item.ImageUrl" alt="logo"></div>
+        }
+    </section>
+</div>

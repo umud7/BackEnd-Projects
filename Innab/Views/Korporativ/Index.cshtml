@@ -1,0 +1,50 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="banner-area">
+    <h2>Korporativ</h2>
+</div>
+
+
+<div class="responsive-container-block bigContainer">
+    <div class="responsive-container-block Container bottomContainer">
+        <div class="allText bottomText">
+            <p class="text-blk subHeadingText">
+                @Model.Korporativs.Name
+            </p>
+            <p class="text-blk description">
+                @Model.Korporativs.Desc
+            </p>
+            <a>
+                <button class="explore">
+                    <a href="telimler.html">Təlimlər</a>
+                </button>
+            </a>
+        </div>
+        <div class="videoContainer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GLj_TvBI6sw?si=kCobnop17KZUFSmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
+    </div>
+</div>
+
+<!---start categories section---->
+<section class="categories" id="categories">
+    <div class="categories-content">
+        @foreach (var item in Model.KorporativImages)
+        {
+            <div class="box">
+                <a href="#"><img src="img/@item.ImageUrl" alt=""></a>
+                <h3>@Html.Raw(item.Desc)</h3>
+                <p></p>
+            </div>
+        }
+    </div>
+</section>
+<!---End  categories section---->
+<!-- Partnior Section -->
+<div class="partnior-container">
+    @await Component.InvokeAsync("CustomerDisplay")
+</div>

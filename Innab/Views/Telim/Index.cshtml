@@ -1,0 +1,38 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="banner-area">
+    <h2>Təlimlər</h2>
+</div>
+
+<!-- Proyekt Telimler Hissesi -->
+<section id="project">
+
+    <ul class="project-filter">
+        <li class="list project-filter-active" data-filter="all">Bütün təlimlər</li>
+        @foreach (var item in Model.Categories)
+        {
+            <li class="list" data-filter="@item.Name">@item.Name</li>
+        }
+        
+    </ul>
+
+    <div class="project-container">
+
+       @foreach (var item in Model.Telims)
+      {
+            <a href="" class="project-box muhasibat">
+                <img src="img/@item.ImageUrl" alt="">
+                <h6>@item.Name</h6>
+            </a>
+        }
+
+
+    </div>
+
+</section>
+
+
+

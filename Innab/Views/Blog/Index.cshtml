@@ -1,0 +1,32 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="banner-area">
+    <h2>Bloq</h2>
+</div>
+
+<section id="course">
+    <div class="course-box">
+        @foreach (var item in Model.Blogs)
+        {
+            <div onclick="window.location.href='coursedetail.html';" class="courses">
+                <img src="~/img/@item.ImageUrl" alt="" />
+                <div class="details">
+                    <span>@item.Date</span>
+                    <h6>@item.Name</h6>
+                    <div class="star">
+                        <span>(0)</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<!-- Partnior Section -->
+<div class="partnior-container">
+    @await Component.InvokeAsync("CustomerDisplay")
+</div>
+

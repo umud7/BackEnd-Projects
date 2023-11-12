@@ -1,0 +1,26 @@
+﻿@model List<Course>
+
+<section id="course">
+    <h1>Our Popular Courses</h1>
+    <p>Replenish man have thing gathering lights yielding shall you</p>
+    <div class="course-box">
+        @foreach (var item in Model)
+        {
+            <div class="courses">
+                <img src="~/images/@item.ImageUrl" alt="" />
+                <div class="details">
+                    <span>@item.Date</span>
+                    <h6>@item.Name</h6>
+                    <div class="star">
+                        @foreach (var item1 in Model)
+                        {
+                            <i class="fa-solid @item.Icon"></i>
+                        }
+                        <span>@item.Count</span>
+                    </div>
+                </div>
+                <div class="cost">@item.Price</div>
+            </div>
+        }
+    </div>
+</section>

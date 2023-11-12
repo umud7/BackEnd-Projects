@@ -1,0 +1,81 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="about-home">
+    <h2>About TechEduca /</h2>
+</section>
+
+<section id="about-container">
+    <div class="about-img">
+        <img src="~/images/@Model.AboutUs.ImageUrl1" alt="" />
+    </div>
+    <div class="about-text">
+        <h2>
+            @Model.AboutUs.Name
+        </h2>
+        <p>
+            @Model.AboutUs.Desc
+        </p>
+        <div class="about-fe">
+            <img src="~/images/@Model.AboutUs.ImageUrl2" alt="" />
+            <div class="fe-text">
+                <h5>@Model.AboutUs.CourseCount</h5>
+                <p>
+                    @Model.AboutUs.CourseDesc
+                </p>
+            </div>
+        </div>
+        <div class="about-fe">
+            <img src="~/images/@Model.AboutUs.ImageUrl3" alt="" />
+            <div class="fe-text">
+                <h5>@Model.AboutUs.LifeTime</h5>
+                <p>
+                    @Model.AboutUs.LifeTimeDesc
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- features -->
+<section id="features">
+    <h1>Awesome Features</h1>
+    <p>Replenish man have thing gathering lights yielding shall you</p>
+    <div class="fea-base">
+        <div class="fea-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Shcolarship Facility</h3>
+            <p>
+                One make creepeth, man bearing theira firmament won't great heaven
+            </p>
+        </div>
+        <div class="fea-box">
+            <i class="fa-solid fa-award"></i>
+            <h3>Dell Online Courses</h3>
+            <p>
+                One make creepeth, man bearing theira firmament won't great heaven
+            </p>
+        </div>
+        <div class="fea-box">
+            <i class="fa-solid fa-award"></i>
+            <h3>Global certification</h3>
+            <p>
+                One make creepeth, man bearing theira firmament won't great heaven
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="trust">
+    <h1>Trusted By</h1>
+    <p>Replenish man have thing gathering lights yielding shall you</p>
+    <div class="trust-img">
+        @foreach (var item in Model.TrustedBies)
+       {
+            <img src="~/images/@item.ImageUrl" alt="" />
+        }
+    </div>
+</section>
+

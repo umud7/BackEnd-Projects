@@ -1,0 +1,34 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="about-home">
+    <h2>Blog /</h2>
+</section>
+
+<section id="blog-container">
+    <div class="blogs">
+        @foreach (var item in Model.Blogs)
+        {
+            <div class="post">
+                <img src="images/@item.ImageUrl" alt="" />
+                <h3>@item.Name</h3>
+                <p>
+                    @item.Desc
+                </p>
+                <a asp-controller="Blog" asp-action="Detail">Read More</a>
+            </div>
+        }
+    </div>
+    <div class="cate">
+        <h2>Categories</h2>
+        <hr />
+       @foreach (var item in Model.BlogCategories)
+        {
+            <a href="#">@item.Name</a>
+            <hr />
+        }
+    </div>
+</section>
+

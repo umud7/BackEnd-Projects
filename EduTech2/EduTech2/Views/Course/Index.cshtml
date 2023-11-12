@@ -1,0 +1,13 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Home -->
+<section id="about-home">
+    <h2>Courses /</h2>
+</section>
+
+<!-- Courses -->
+@await Component.InvokeAsync("Course",6)
+

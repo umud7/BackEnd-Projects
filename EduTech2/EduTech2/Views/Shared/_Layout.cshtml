@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Website</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="~/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    @await Component.InvokeAsync("Header")
+
+        @RenderBody()
+
+    <!-- Footer -->
+    @await Component.InvokeAsync("Footer")
+
+    <script>
+      $("#menu-btn").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+
+        function updateCountdown() {
+            const now = new Date();
+            const targetDate = new Date("2023-19-11T00:00:00"); // Set your target date and time
+
+            const timeDifference = targetDate - now;
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days + " Days";
+            document.getElementById("hours").innerText = hours + " Hours";
+            document.getElementById("minutes").innerText = minutes + " Mins";
+            document.getElementById("seconds").innerText = seconds + " Secs";
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+
+        function sendMessage() {
+            // Get input values
+            var name = document.getElementById("nameInput").value;
+            var email = document.getElementById("emailInput").value;
+            var subject = document.getElementById("subjectInput").value;
+            var message = document.getElementById("messageInput").value;
+
+            // You can perform additional validation here if needed
+
+            // Display the input values (for demonstration purposes)
+            alert("Name: " + name + "\nEmail: " + email + "\nSubject: " + subject + "\nMessage: " + message);
+
+            // Reset the form
+            resetForm();
+        }
+
+        function resetForm() {
+            // Set input values to empty
+            document.getElementById("nameInput").value = "";
+            document.getElementById("emailInput").value = "";
+            document.getElementById("subjectInput").value = "";
+            document.getElementById("messageInput").value = "";
+        }
+        
+
+    </script>
+  </body>
+</html>

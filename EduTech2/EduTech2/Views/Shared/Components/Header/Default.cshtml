@@ -1,0 +1,15 @@
+﻿@model Bio
+<nav>
+    <a class="navbar-brand"  asp-controller="home" asp-action="index" ><img src="~/images/@Model.ImageUrl" alt="" /></a>
+    <div class="navigation">
+        <ul>
+            <i id="menu-close" class="fa-sharp fa-solid fa-xmark"></i>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="About" asp-action="Index">About</a></li>
+            <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+            <li><a asp-controller="Course" asp-action="Index">Course</a></li>
+            <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+        </ul>
+        <img id="menu-btn" src="~/images/menu.png" alt="" />
+    </div>
+</nav>
